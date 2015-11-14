@@ -1,0 +1,58 @@
+{
+	"name": "tagged-comment",
+	"description": "Add tagged comments to your code",
+	"version": "0.0.1",
+	"publisher": "alefragnani",
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"activationEvents": [
+		"onCommand:tagged-comment.tag",
+		"onCommand:tagged-comment.reTag"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "tagged-comment.tag",
+				"title": "Tagged: Add a tagged comment"
+			},
+			{
+				"command": "tagged-comment.reTag",
+				"title": "Tagged: Re-Add the previously tagged comment"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Tagged Comment Configuration",
+			"properties": {
+				"tagged.tagString": {
+					"type": "string",
+					"default": "// #day/#month/#year - TAG: #enteredText",
+					"description": "The tag template that you would like to use"
+				}
+			}
+		},
+		"keybindings": [
+			{
+				"command": "tagged-comment.tag",
+				"key": "ctrl+alt+m",
+				"mac": "cmd+alt+m",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "tagged-comment.reTag",
+				"key": "ctrl+alt+shift+m",
+				"mac": "cmd+alt+shift+m",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"vscode": "next"
+	}
+}
