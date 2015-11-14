@@ -1,10 +1,23 @@
 {
 	"name": "tagged-comment",
+	"displayName": "Tagged Comment",
 	"description": "Add tagged comments to your code",
 	"version": "0.0.1",
 	"publisher": "alefragnani",
+	"galleryBanner": {
+		"color": "#0000FF",
+		"theme": "dark"
+	},
 	"engines": {
 		"vscode": "0.10.x"
+	},
+	"homepage": "https://github.com/alefragnani/vscode-tagged-comment/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alefragnani/vscode-tagged-comment.git"
+	},
+	"bugs": {
+		"url": "https://github.com/alefragnani/vscode-tagged-comment/issues"
 	},
 	"activationEvents": [
 		"onCommand:tagged-comment.tag",
