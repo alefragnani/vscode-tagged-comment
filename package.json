@@ -2,7 +2,7 @@
 	"name": "tagged-comment",
 	"displayName": "Tagged Comment",
 	"description": "Add tagged comments to your code",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"publisher": "alefragnani",
 	"galleryBanner": {
 		"color": "#596877",
@@ -39,7 +39,7 @@
 			},
 			{
 				"command": "tagged-comment.tagAbove",
-				"title": "Tagged: Add a Tagged Comment Above"
+				"title": "Tagged: Add a Tagged Comment Line Above"
 			},
 			{
 				"command": "tagged-comment.reTag",
@@ -47,7 +47,7 @@
 			},
 			{
 				"command": "tagged-comment.reTagAbove",
-				"title": "Tagged: Re-Add the Previously Tagged Comment Above"
+				"title": "Tagged: Re-Add the Previously Tagged Comment Line Above"
 			}
 		],
 		"configuration": {
