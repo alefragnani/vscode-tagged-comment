@@ -6,10 +6,7 @@ import * as vscode from 'vscode';
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) { 
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "tagged-comment" is now active!');
-
+	// register commands
 	vscode.commands.registerCommand('tagged-comment.tag', () => tag(false));
 	vscode.commands.registerCommand('tagged-comment.reTag', () => reTag(false));
 	vscode.commands.registerCommand('tagged-comment.tagAbove', () => tag(true));
@@ -17,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
 	
 	function reTag(lineAbove: boolean) {
 		let lastTagged = context.globalState.get('lastTagged', '');
-		console.log('lastTagged: ', lastTagged);
+		// console.log('lastTagged: ', lastTagged);
 		insertTextInEditor(lastTagged, lineAbove);
 	};
 
@@ -34,7 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
 		// as the user
 		vscode.window.showInputBox(ibo)
 			.then(text => {
-				console.log("You typed: " + text);
+				// console.log("You typed: " + text);
 				if (typeof text == 'undefined') {
 					return;
 				}
@@ -62,7 +59,7 @@ export function activate(context: vscode.ExtensionContext) {
 				//
 				var tagString = vscode.workspace.getConfiguration('tagged').get('tagString', '// #day/#month/#year - TAG: #enteredText');
 
-				console.log("tagstring: " + tagString);
+				// console.log("tagstring: " + tagString);
 
 				var str = tagString;
 				str = str.replace("#day", day);
@@ -70,7 +67,7 @@ export function activate(context: vscode.ExtensionContext) {
 				str = str.replace("#year", year);
 				str = str.replace("#enteredText", text);
 
-				console.log("str: " + str);
+				// console.log("str: " + str);
 
 				context.globalState.update('lastTagged', str);
 
@@ -104,10 +101,10 @@ export function activate(context: vscode.ExtensionContext) {
 			let pos = new vscode.Position(startLine, startCharacter);
 			editBuilder.insert(pos, text);
 		}).then(() => {
-			console.log('Edit applied!');
+			// console.log('Edit applied!');
 		}, (err) => {
-			console.log('Edit rejected!');
-			console.error(err);
+			// console.log('Edit rejected!');
+			// console.error(err);
 		});
 	}
 }
