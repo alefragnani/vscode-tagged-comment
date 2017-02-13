@@ -26,18 +26,28 @@
 	},
 	"activationEvents": [
 		"onCommand:tagged-comment.tag",
-		"onCommand:tagged-comment.reTag"
+		"onCommand:tagged-comment.tagAbove",
+		"onCommand:tagged-comment.reTag",
+		"onCommand:tagged-comment.reTagAbove"
 	],
 	"main": "./out/extension",
 	"contributes": {
 		"commands": [
 			{
 				"command": "tagged-comment.tag",
-				"title": "Tagged: Add a tagged comment"
+				"title": "Tagged: Add a Tagged Comment"
+			},
+			{
+				"command": "tagged-comment.tagAbove",
+				"title": "Tagged: Add a Tagged Comment Above"
 			},
 			{
 				"command": "tagged-comment.reTag",
-				"title": "Tagged: Re-Add the previously tagged comment"
+				"title": "Tagged: Re-Add the Previously Tagged Comment"
+			},
+			{
+				"command": "tagged-comment.reTagAbove",
+				"title": "Tagged: Re-Add the Previously Tagged Comment Above"
 			}
 		],
 		"configuration": {

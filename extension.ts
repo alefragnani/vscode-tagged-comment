@@ -10,18 +10,18 @@ export function activate(context: vscode.ExtensionContext) {
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "tagged-comment" is now active!');
 
-	vscode.commands.registerCommand('tagged-comment.reTag', () => {
+	vscode.commands.registerCommand('tagged-comment.tag', () => tag(false));
+	vscode.commands.registerCommand('tagged-comment.reTag', () => reTag(false));
+	vscode.commands.registerCommand('tagged-comment.tagAbove', () => tag(true));
+	vscode.commands.registerCommand('tagged-comment.reTagAbove', () => reTag(true));
+	
+	function reTag(lineAbove: boolean) {
 		let lastTagged = context.globalState.get('lastTagged', '');
 		console.log('lastTagged: ', lastTagged);
-		insertTextInEditor(lastTagged);
-	});
+		insertTextInEditor(lastTagged, lineAbove);
+	};
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with  registerCommand
-	// The commandId parameter must match the command field in package.json
-	vscode.commands.registerCommand('tagged-comment.tag', () => {
-		// The code you place here will be executed every time your command is executed
-		
+	function tag(lineAbove: boolean) {
 		let lastEnteredText = context.globalState.get('lastEnteredText', '');
 
 		// configure the InputBox				
@@ -74,31 +74,34 @@ export function activate(context: vscode.ExtensionContext) {
 
 				context.globalState.update('lastTagged', str);
 
-				var selection = vscode.window.activeTextEditor.selection;
-				var startLine = selection.start.line;
-				var startCharacter = selection.start.character;
-
-				var editor = vscode.window.activeTextEditor;
-				editor.edit((editBuilder) => {
-					var pos = new vscode.Position(startLine, startCharacter);
-					editBuilder.insert(pos, str);
-				}).then(() => {
-					console.log('Edit applied!');
-				}, (err) => {
-					console.log('Edit rejected!');
-					console.error(err);
-				});
+				insertTextInEditor(str, lineAbove);
 			});
-	});
+	};
+	
+	function getIndentText(line: string): string {
+		let pos: number = line.search(/\S/);
+		return line.substr(0, pos);	
+	}
 
-	function insertTextInEditor(text: any) {
-		var selection = vscode.window.activeTextEditor.selection;
-		var startLine = selection.start.line;
-		var startCharacter = selection.start.character;
+	function insertTextInEditor(text: string, lineAbove: boolean) {
+		let selection: vscode.Selection;
+		let startLine: number;
+		let startCharacter: number;
+		
+		selection = vscode.window.activeTextEditor.selection;
+		startLine = selection.start.line;
+		
+		if (!lineAbove) {
+			startCharacter = selection.start.character;
+		} else {
+			let lineText: string = vscode.window.activeTextEditor.document.lineAt(selection.start.line).text;
+			text = getIndentText(lineText).concat(text).concat("\r");
+			startCharacter = 0;
+		}
 
-		var editor = vscode.window.activeTextEditor;
+		let editor = vscode.window.activeTextEditor;
 		editor.edit((editBuilder) => {
-			var pos = new vscode.Position(startLine, startCharacter);
+			let pos = new vscode.Position(startLine, startCharacter);
 			editBuilder.insert(pos, text);
 		}).then(() => {
 			console.log('Edit applied!');
