@@ -2,7 +2,7 @@
 	"name": "tagged-comment",
 	"displayName": "Tagged Comment",
 	"description": "Add tagged comments to your code",
-	"version": "0.4.0",
+	"version": "2.0.0",
 	"publisher": "alefragnani",
 	"galleryBanner": {
 		"color": "#596877",
@@ -15,7 +15,7 @@
 		"vscode": "^1.12.0"
 	},
 	"icon": "images/icon.png",
-    "license": "SEE LICENSE IN LICENSE.md",
+	"license": "SEE LICENSE IN LICENSE.md",
 	"homepage": "https://github.com/alefragnani/vscode-tagged-comment/blob/master/README.md",
 	"repository": {
 		"type": "git",
