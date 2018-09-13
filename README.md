@@ -1,14 +1,17 @@
-# Functionality
+# Tagged Comment
 
-An easy way to add personalized comments to your code
+**Tagged Comment** is an open source extension created for **Visual Studio Code**. While being free and open source, if you find it useful, please consider [supporting it](#support)
 
-Set your own template for the comment and use _variables_ for richer content. You can even _re-tag_ a comment, adding the previously used tag.
+It helps you to personalized comments on your code. Set define a template for your comments. You can combine _fixed values_ and _variables_ for richer content. You can even _re-tag_ a comment, adding the previously used tag.
 
-# Usage
+# Features
 
-### Availble commands
+## Available commands
 
-![Commands](images/tagged-comment-commands.png)
+* `Tagged: Add a Tagged Comment`
+* `Tagged: Add a Tagged Comment Line Above`
+* `Tagged: Re-Add the Previously Tagged Comment`
+* `Tagged: Re-Add the Previously Tagged Comment Line Above`
 
 ### Add your tag
 
@@ -18,7 +21,7 @@ Set your own template for the comment and use _variables_ for richer content. Yo
 
 ![Comment Added](images/tagged-comment-comment-added.png)
 
-## Available Variables
+## Available variables
 
 The following variables are available:
 
@@ -27,9 +30,9 @@ The following variables are available:
 - `#month`
 - `#year`
 
-## Examples
+### Examples
 
-### Default
+#### Default
 
 The default template just adds the current date:
 
@@ -37,7 +40,7 @@ The default template just adds the current date:
 // #day/#month/#year - TAG: #enteredText
 ```
 
-### With an issue tracker ID
+#### With an issue tracker ID
 
 ```
 // #day/#month/#year - ISSUE: #enteredText
