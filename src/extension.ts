@@ -13,15 +13,15 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand("tagged-comment.reTagAbove", () => reTag(true));
 
     function reTag(lineAbove: boolean) {
-        let lastTagged = context.globalState.get("lastTagged", "");
+        const lastTagged = context.globalState.get("lastTagged", "");
         insertTextInEditor(lastTagged, lineAbove);
     }
 
     function tag(lineAbove: boolean) {
-        let lastEnteredText = context.globalState.get("lastEnteredText", "");
+        const lastEnteredText = context.globalState.get("lastEnteredText", "");
 
         // configure the InputBox				
-        let ibo = <vscode.InputBoxOptions> {
+        const ibo = <vscode.InputBoxOptions> {
             prompt: "Add a TAG",
             placeHolder: "the placeholder",
             value: lastEnteredText
@@ -38,7 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
                 context.globalState.update("lastEnteredText", text);
 
                 // creates the tag
-                let date = new Date();
+                const date = new Date();
                 let day: string;
                 let month: string;
                 let year: string;
@@ -58,7 +58,7 @@ export function activate(context: vscode.ExtensionContext) {
                 year = date.getFullYear().toString();
 
                 //
-                let tagString = vscode.workspace.getConfiguration("tagged").get("tagString", "// #day/#month/#year - TAG: #enteredText");
+                const tagString = vscode.workspace.getConfiguration("tagged").get("tagString", "// #day/#month/#year - TAG: #enteredText");
 
                 // console.log("tagstring: " + tagString);
 
@@ -77,7 +77,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     function getIndentText(line: string): string {
-        let pos: number = line.search(/\S/);
+        const pos: number = line.search(/\S/);
         return line.substr(0, pos);
     }
 
@@ -92,14 +92,14 @@ export function activate(context: vscode.ExtensionContext) {
         if (!lineAbove) {
             startCharacter = selection.start.character;
         } else {
-            let lineText: string = vscode.window.activeTextEditor.document.lineAt(selection.start.line).text;
+            const lineText: string = vscode.window.activeTextEditor.document.lineAt(selection.start.line).text;
             text = getIndentText(lineText).concat(text).concat("\r");
             startCharacter = 0;
         }
 
-        let editor = vscode.window.activeTextEditor;
+        const editor = vscode.window.activeTextEditor;
         editor.edit((editBuilder) => {
-            let pos = new vscode.Position(startLine, startCharacter);
+            const pos = new vscode.Position(startLine, startCharacter);
             editBuilder.insert(pos, text);
         }).then(() => {
             // console.log('Edit applied!');
