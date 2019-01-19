@@ -1,3 +1,7 @@
+## [2.2.0] - 2019-01-18
+### Internal
+* Update VSCode devDependency based on security alerts (1.1.22)
+
 ## [2.1.0] - 2018-12-03
 ### Added
 * New publishing model
