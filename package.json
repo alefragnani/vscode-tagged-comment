@@ -52,7 +52,7 @@
 		],
 		"configuration": {
 			"type": "object",
-			"title": "Tagged Comment Configuration",
+			"title": "Tagged Comment",
 			"properties": {
 				"tagged.tagString": {
 					"type": "string",
