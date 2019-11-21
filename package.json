@@ -14,6 +14,10 @@
 	"engines": {
 		"vscode": "^1.40.0"
 	},
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
 	"icon": "images/icon.png",
 	"license": "SEE LICENSE IN LICENSE.md",
 	"homepage": "https://github.com/alefragnani/vscode-tagged-comment/blob/master/README.md",
