@@ -3,6 +3,10 @@
   <a title="Learn more about Tagged Comment" href="http://github.com/alefragnani/vscode-tagged-comment"><img src="https://raw.githubusercontent.com/alefragnani/vscode-tagged-comment/master/images/vscode-tagged-comment-logo-readme.png" alt="Tagged Comment Logo" width="70%" /></a>
 </p>
 
+# What's New in Tagged Comment 2
+
+* Support **Remote Development**
+
 # Support
 
 **Tagged Comment** is an open source extension created for **Visual Studio Code**. While being free and open source, if you find it useful, please consider supporting it.

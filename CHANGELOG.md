@@ -1,3 +1,7 @@
+## [2.3.0] - 2019-11-21
+### Added
+* Support **Remote Development**
+
 ## [2.2.0] - 2019-01-18
 ### Internal
 * Update VSCode devDependency based on security alerts (1.1.22)
