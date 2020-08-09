@@ -44,7 +44,6 @@ export function activate(context: vscode.ExtensionContext) {
                 const date = new Date();
                 let day: string;
                 let month: string;
-                let year: string;
 
                 if (date.getDate().toString().length === 1) {
                     day = "0" + date.getDate();
@@ -58,7 +57,7 @@ export function activate(context: vscode.ExtensionContext) {
                     month = (date.getMonth() + 1).toString();
                 }
 
-                year = date.getFullYear().toString();
+                const year = date.getFullYear().toString();
 
                 //
                 const tagString = vscode.workspace.getConfiguration("tagged").get("tagString", "// #day/#month/#year - TAG: #enteredText");
@@ -85,12 +84,10 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     function insertTextInEditor(text: string, lineAbove: boolean) {
-        let selection: vscode.Selection;
-        let startLine: number;
         let startCharacter: number;
 
-        selection = vscode.window.activeTextEditor.selection;
-        startLine = selection.start.line;
+        const selection = vscode.window.activeTextEditor.selection;
+        const startLine = selection.start.line;
 
         if (!lineAbove) {
             startCharacter = selection.start.character;
