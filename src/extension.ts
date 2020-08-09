@@ -84,6 +84,10 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     function insertTextInEditor(text: string, lineAbove: boolean) {
+        if (!vscode.window.activeTextEditor) { 
+            return;
+        }
+        
         let startCharacter: number;
 
         const selection = vscode.window.activeTextEditor.selection;
