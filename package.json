@@ -2,7 +2,7 @@
 	"name": "tagged-comment",
 	"displayName": "Tagged Comment",
 	"description": "Add tagged comments to your code",
-	"version": "2.3.0",
+	"version": "2.4.0",
 	"publisher": "alefragnani",
 	"galleryBanner": {
 		"color": "#596877",
@@ -12,7 +12,7 @@
 		"Other"
 	],
 	"engines": {
-		"vscode": "^1.40.0"
+		"vscode": "^1.41.0"
 	},
 	"extensionKind": [
 		"ui",
@@ -82,12 +82,11 @@
 	},
 	"scripts": {
 		"vscode:prepublish": "tsc -p ./",
-		"compile": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install"
+		"compile": "tsc -watch -p ./"
 	},
 	"devDependencies": {
-		"@types/node": "^6.0.40",
-		"typescript": "^2.3.2",
-		"vscode": "^1.1.36"
+		"@types/node": "^10.14.17",
+		"@types/vscode": "^1.41.0",
+		"typescript": "^3.5.1"
 	}
 }

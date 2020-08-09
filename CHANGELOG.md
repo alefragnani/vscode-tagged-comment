@@ -1,3 +1,7 @@
+## [2.4.0] - 2020-08-09
+### Added
+* Support **Remote Development**
+
 ## [2.3.0] - 2019-11-21
 ### Added
 * Support **Remote Development**
