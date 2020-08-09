@@ -1,3 +1,7 @@
 out
 node_modules
 *.pdn
+.vscode-test
+npm-debug.log
+dist
+**/*.vsix
