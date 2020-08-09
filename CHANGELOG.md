@@ -1,6 +1,7 @@
 ## [2.4.0] - 2020-08-09
 ### Added
 * Migrate from TSLint to ESLint (issue [#13](https://github.com/alefragnani/vscode-tagged-comment/issues/13))
+* Support WebPack bundling (issue [#12](https://github.com/alefragnani/vscode-tagged-comment/issues/12))
 * Support VS Code package split (issue [#11](https://github.com/alefragnani/vscode-tagged-comment/issues/11))
 
 ## [2.3.0] - 2019-11-21
