@@ -1,5 +1,5 @@
 .vscode/**
-.devcontainer
+.vscode-test/**
 typings/**
 **/*.ts
 **/*.map
@@ -7,12 +7,9 @@ out/**
 node_modules/**
 .gitignore
 tsconfig.json
-vsc-extension-quickstart.md
-images/*.pdn
-.vscode-test/**
-.travis.yml
-appveyor.yml
-tslint.json
-npm-debug.log
+test/**
+*.vsix
 package-lock.json
 webpack.config.js
+.github/
+.devcontainer/
