@@ -12,6 +12,21 @@
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
             "smartStep": true,
             "sourceMaps": true
-        }
+		},
+		{
+			"name": "Launch Tests",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--disable-extensions",
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"--extensionTestsPath=${workspaceFolder}/out/src/test/suite/index"
+			],
+			"outFiles": [
+				"${workspaceFolder}/out/src/test/**/*.js"
+			],
+			"preLaunchTask": "npm: test-compile"
+		}
 	]
 }
