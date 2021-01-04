@@ -1,3 +1,8 @@
+[![](https://vsmarketplacebadge.apphb.com/version-short/alefragnani.tagged-comment.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment)
+[![](https://vsmarketplacebadge.apphb.com/downloads-short/alefragnani.tagged-comment.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment)
+[![](https://vsmarketplacebadge.apphb.com/rating-short/alefragnani.tagged-comment.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment)
+[![](https://img.shields.io/github/workflow/status/alefragnani/vscode-tagged-comment/CI)](https://github.com/alefragnani/vscode-tagged-comment/actions?query=workflow%3ACI)
+
 <p align="center">
   <br />
   <a title="Learn more about Tagged Comment" href="http://github.com/alefragnani/vscode-tagged-comment"><img src="https://raw.githubusercontent.com/alefragnani/vscode-tagged-comment/master/images/vscode-tagged-comment-logo-readme.png" alt="Tagged Comment Logo" width="70%" /></a>
