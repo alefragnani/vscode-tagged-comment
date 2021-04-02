@@ -2,7 +2,7 @@
 	"name": "tagged-comment",
 	"displayName": "Tagged Comment",
 	"description": "Add tagged comments to your code",
-	"version": "2.4.0",
+	"version": "2.4.1",
 	"publisher": "alefragnani",
 	"galleryBanner": {
 		"color": "#596877",

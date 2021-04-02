@@ -1,3 +1,9 @@
+## [2.4.1] - 2021-04-02
+### Internal
+- Security Alert: y18n (dependabot [PR #16](https://github.com/alefragnani/vscode-tagged-comment/pull/16))
+- Security Alert: elliptic (dependabot [PR #15](https://github.com/alefragnani/vscode-tagged-comment/pull/15))
+- Security Alert: ini (dependabot [PR #14](https://github.com/alefragnani/vscode-tagged-comment/pull/14))
+
 ## [2.4.0] - 2020-08-09
 ### Internal
 * Migrate from TSLint to ESLint (issue [#13](https://github.com/alefragnani/vscode-tagged-comment/issues/13))
