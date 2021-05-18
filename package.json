@@ -18,6 +18,9 @@
 		"ui",
 		"workspace"
 	],
+	"capabilities": {
+		"virtualWorkspaces": true
+	},
 	"icon": "images/icon.png",
 	"license": "SEE LICENSE IN LICENSE.md",
 	"homepage": "https://github.com/alefragnani/vscode-tagged-comment/blob/master/README.md",
