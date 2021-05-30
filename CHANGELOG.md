@@ -1,3 +1,12 @@
+## [2.5.0] - 2021-05-30
+### Added
+* Support **Workspace Trust** (issue [#21](https://github.com/alefragnani/vscode-tagged-comment/issues/21))
+* Support **Virtual Workspaces** (issue [#20](https://github.com/alefragnani/vscode-tagged-comment/issues/20))
+
+### Internal
+- Security Alert: lodash (dependabot [PR #19](https://github.com/alefragnani/vscode-tagged-comment/pull/19))
+- Security Alert: ssri (dependabot [PR #17](https://github.com/alefragnani/vscode-tagged-comment/pull/17))
+
 ## [2.4.1] - 2021-04-02
 ### Internal
 - Security Alert: y18n (dependabot [PR #16](https://github.com/alefragnani/vscode-tagged-comment/pull/16))
