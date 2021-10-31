@@ -107,7 +107,7 @@ export function activate(context: vscode.ExtensionContext) {
             editBuilder.insert(pos, text);
         }).then(() => {
             // console.log('Edit applied!');
-        }, (err) => {
+        }, () => {
             // console.log('Edit rejected!');
             // console.error(err);
         });
