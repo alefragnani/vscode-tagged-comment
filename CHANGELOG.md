@@ -1,3 +1,8 @@
+## [2.6.0] - 2021-11-04
+### Internal
+* Add CONTRIBUTING documentation (issue [#24](https://github.com/alefragnani/vscode-tagged-comment/issues/24))
+* Update dependencies (issue [#25](https://github.com/alefragnani/vscode-tagged-comment/issues/25))
+
 ## [2.5.0] - 2021-05-30
 ### Added
 * Support **Workspace Trust** (issue [#21](https://github.com/alefragnani/vscode-tagged-comment/issues/21))
