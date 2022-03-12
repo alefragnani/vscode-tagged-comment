@@ -10,18 +10,13 @@
 
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack');
+
+
 
 /**@type {import('webpack').Configuration}*/
 const config = {
-    target: 'node', // vscode extensions run in a Node.js-context 📖 -> https://webpack.js.org/configuration/node/
-
-    entry: './src/extension.ts', // the entry point of this extension, 📖 -> https://webpack.js.org/configuration/entry-context/
-    output: { // the bundle is stored in the 'dist' folder (check package.json), 📖 -> https://webpack.js.org/configuration/output/
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'extension.js',
-        libraryTarget: "commonjs2",
-        devtoolModuleFilenameTemplate: "../[resource-path]",
-    },
+    entry: "./src/extension.ts",
     optimization: {
         minimizer: [new TerserPlugin({
             parallel: true,
@@ -50,6 +45,28 @@ const config = {
             }]
         }]
     },
+};
+
+const nodeConfig = {
+    ...config,
+    target: "node",
+    output: { // the bundle is stored in the 'dist' folder (check package.json), 📖 -> https://webpack.js.org/configuration/output/
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'extension-node.js',
+        libraryTarget: "commonjs2",
+        devtoolModuleFilenameTemplate: "../[resource-path]",
+    },
 }
 
-module.exports = config;
+const webConfig = {
+    ...config,
+    target: "webworker",
+    output: { // the bundle is stored in the 'dist' folder (check package.json), 📖 -> https://webpack.js.org/configuration/output/
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'extension-web.js',
+        libraryTarget: "commonjs2",
+        devtoolModuleFilenameTemplate: "../[resource-path]",
+    },
+}
+
+module.exports = [webConfig,  nodeConfig];

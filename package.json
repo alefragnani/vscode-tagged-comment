@@ -40,7 +40,8 @@
 		"onCommand:tagged-comment.reTag",
 		"onCommand:tagged-comment.reTagAbove"
 	],
-	"main": "./dist/extension",
+	"main": "./dist/extension-node.js",
+    "browser": "./dist/extension-web.js",
 	"contributes": {
 		"commands": [
 			{
