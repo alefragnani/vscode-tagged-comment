@@ -1,3 +1,7 @@
+## [2.7.0] - 2022-04-01
+### Internal
+* Add Web support (issue [#23](https://github.com/alefragnani/vscode-tagged-comment/issues/23))
+
 ## [2.6.0] - 2021-11-04
 ### Internal
 * Add CONTRIBUTING documentation (issue [#24](https://github.com/alefragnani/vscode-tagged-comment/issues/24))
