@@ -1,3 +1,7 @@
+## [2.7.3] - 2022-07-16
+### Internal
+* Add GitHub Sponsors support (issue [#23](https://github.com/alefragnani/vscode-tagged-comment/pull/32))
+
 ## [2.7.0] - 2022-04-01
 ### Internal
 * Add Web support (issue [#23](https://github.com/alefragnani/vscode-tagged-comment/issues/23))
