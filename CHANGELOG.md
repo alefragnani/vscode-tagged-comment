@@ -1,6 +1,11 @@
+## [2.8.0] - 2022-10-03
+### Internal
+* Cleanup extension (issue [#34](https://github.com/alefragnani/vscode-tagged-comment/issues/34))
+- Security Alert: terser (dependabot [PR #33](https://github.com/alefragnani/vscode-tagged-comment/pull/33))
+
 ## [2.7.3] - 2022-07-16
 ### Internal
-* Add GitHub Sponsors support (issue [#23](https://github.com/alefragnani/vscode-tagged-comment/pull/32))
+* Add GitHub Sponsors support (PR [#32](https://github.com/alefragnani/vscode-tagged-comment/pull/32))
 
 ## [2.7.0] - 2022-04-01
 ### Internal
