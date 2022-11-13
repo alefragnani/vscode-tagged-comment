@@ -1,0 +1,8 @@
+{
+    "tagged-comment.configuration.title": "Tagged Comment",
+    "tagged-comment.commands.tag.title": "Tagged: Adicionar um Comentário Etiquetado",
+    "tagged-comment.commands.tagAbove.title": "Tagged: Adicionar um Comentário Etiquetado uma Linha Acima",
+    "tagged-comment.commands.reTag.title": "Tagged: Readicionar o Comentário Etiquetado",
+    "tagged-comment.commands.reTagAbove.title": "Tagged: Readicionar o Comentário Etiquetado uma Linha Acima",
+    "tagged-comment.configuration.tagString.description": "O modelo de comentário etiquetado que você gostaria de usar"
+}

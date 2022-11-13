@@ -49,29 +49,29 @@
 		"commands": [
 			{
 				"command": "tagged-comment.tag",
-				"title": "Tagged: Add a Tagged Comment"
+				"title": "%tagged-comment.commands.tag.title%"
 			},
 			{
 				"command": "tagged-comment.tagAbove",
-				"title": "Tagged: Add a Tagged Comment Line Above"
+				"title": "%tagged-comment.commands.tagAbove.title%"
 			},
 			{
 				"command": "tagged-comment.reTag",
-				"title": "Tagged: Re-Add the Previously Tagged Comment"
+				"title": "%tagged-comment.commands.reTag.title%"
 			},
 			{
 				"command": "tagged-comment.reTagAbove",
-				"title": "Tagged: Re-Add the Previously Tagged Comment Line Above"
+				"title": "%tagged-comment.commands.reTagAbove.title%"
 			}
 		],
 		"configuration": {
 			"type": "object",
-			"title": "Tagged Comment",
+			"title": "%tagged-comment.configuration.title%",
 			"properties": {
 				"tagged.tagString": {
 					"type": "string",
 					"default": "// #day/#month/#year - TAG: #enteredText",
-					"description": "The tag template that you would like to use"
+					"description": "%tagged-comment.configuration.tagString.description%"
 				}
 			}
 		},
