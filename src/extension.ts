@@ -25,8 +25,8 @@ export function activate(context: vscode.ExtensionContext) {
 
         // configure the InputBox				
         const ibo = <vscode.InputBoxOptions> {
-            prompt: "Add a TAG",
-            placeHolder: "the placeholder",
+            prompt: vscode.l10n.t("Add a TAG"),
+            placeHolder: vscode.l10n.t("Type a TAG to be added"),
             value: lastEnteredText
         };
 

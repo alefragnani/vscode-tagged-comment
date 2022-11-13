@@ -1,0 +1,8 @@
+{
+    "tagged-comment.configuration.title": "Tagged Comment",
+    "tagged-comment.commands.tag.title": "Tagged: Add a Tagged Comment",
+    "tagged-comment.commands.tagAbove.title": "Tagged: Add a Tagged Comment Line Above",
+    "tagged-comment.commands.reTag.title": "Tagged: Re-Add the Previously Tagged Comment",
+    "tagged-comment.commands.reTagAbove.title": "Tagged: Re-Add the Previously Tagged Comment Line Above",
+    "tagged-comment.configuration.tagString.description": "The tag template that you would like to use"
+}

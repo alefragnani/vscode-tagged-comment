@@ -12,7 +12,7 @@
 		"Other"
 	],
 	"engines": {
-		"vscode": "^1.61.0"
+		"vscode": "^1.73.0"
 	},
 	"extensionKind": [
 		"ui",
@@ -45,33 +45,34 @@
 	],
 	"main": "./dist/extension-node.js",
     "browser": "./dist/extension-web.js",
+    "l10n": "./l10n",
 	"contributes": {
 		"commands": [
 			{
 				"command": "tagged-comment.tag",
-				"title": "Tagged: Add a Tagged Comment"
+				"title": "%tagged-comment.commands.tag.title%"
 			},
 			{
 				"command": "tagged-comment.tagAbove",
-				"title": "Tagged: Add a Tagged Comment Line Above"
+				"title": "%tagged-comment.commands.tagAbove.title%"
 			},
 			{
 				"command": "tagged-comment.reTag",
-				"title": "Tagged: Re-Add the Previously Tagged Comment"
+				"title": "%tagged-comment.commands.reTag.title%"
 			},
 			{
 				"command": "tagged-comment.reTagAbove",
-				"title": "Tagged: Re-Add the Previously Tagged Comment Line Above"
+				"title": "%tagged-comment.commands.reTagAbove.title%"
 			}
 		],
 		"configuration": {
 			"type": "object",
-			"title": "Tagged Comment",
+			"title": "%tagged-comment.configuration.title%",
 			"properties": {
 				"tagged.tagString": {
 					"type": "string",
 					"default": "// #day/#month/#year - TAG: #enteredText",
-					"description": "The tag template that you would like to use"
+					"description": "%tagged-comment.configuration.tagString.description%"
 				}
 			}
 		},
@@ -109,7 +110,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^14.17.27",
-		"@types/vscode": "^1.61.0",
+		"@types/vscode": "^1.73.0",
 		"@types/mocha": "^9.0.0",
         "@types/glob": "^7.1.4",
 		"@typescript-eslint/eslint-plugin": "^5.1.0",
