@@ -12,7 +12,7 @@
 		"Other"
 	],
 	"engines": {
-		"vscode": "^1.61.0"
+		"vscode": "^1.73.0"
 	},
 	"extensionKind": [
 		"ui",
@@ -45,6 +45,7 @@
 	],
 	"main": "./dist/extension-node.js",
     "browser": "./dist/extension-web.js",
+    "l10n": "./l10n",
 	"contributes": {
 		"commands": [
 			{
@@ -109,7 +110,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^14.17.27",
-		"@types/vscode": "^1.61.0",
+		"@types/vscode": "^1.73.0",
 		"@types/mocha": "^9.0.0",
         "@types/glob": "^7.1.4",
 		"@typescript-eslint/eslint-plugin": "^5.1.0",
