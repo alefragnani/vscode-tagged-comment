@@ -12,7 +12,7 @@
 		"Other"
 	],
 	"engines": {
-		"vscode": "^1.73.0"
+		"vscode": "^1.74.0"
 	},
 	"extensionKind": [
 		"ui",
@@ -37,12 +37,6 @@
     "sponsor": {
         "url": "https://github.com/sponsors/alefragnani"
     },
-	"activationEvents": [
-		"onCommand:tagged-comment.tag",
-		"onCommand:tagged-comment.tagAbove",
-		"onCommand:tagged-comment.reTag",
-		"onCommand:tagged-comment.reTagAbove"
-	],
 	"main": "./dist/extension-node.js",
     "browser": "./dist/extension-web.js",
     "l10n": "./l10n",
