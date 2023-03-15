@@ -1,6 +1,12 @@
+## [2.9.0] - 2023-03-14
+### Internal
+- Support new **Implicit Activation Events API** (issue [#40](https://github.com/alefragnani/vscode-tagged-comment/issues/40))
+- Support **Translation** and **Localization** APIs (issue [#37](https://github.com/alefragnani/vscode-tagged-comment/issues/37))
+- Security Alert: minimatch (dependabot [PR #39](https://github.com/alefragnani/vscode-tagged-comment/pull/39))
+
 ## [2.8.0] - 2022-10-03
 ### Internal
-* Cleanup extension (issue [#34](https://github.com/alefragnani/vscode-tagged-comment/issues/34))
+- Cleanup extension (issue [#34](https://github.com/alefragnani/vscode-tagged-comment/issues/34))
 - Security Alert: terser (dependabot [PR #33](https://github.com/alefragnani/vscode-tagged-comment/pull/33))
 
 ## [2.7.3] - 2022-07-16
