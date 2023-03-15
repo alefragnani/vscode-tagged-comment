@@ -1,7 +1,7 @@
-[![](https://vsmarketplacebadge.apphb.com/version-short/alefragnani.tagged-comment.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment)
-[![](https://vsmarketplacebadge.apphb.com/downloads-short/alefragnani.tagged-comment.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment)
-[![](https://vsmarketplacebadge.apphb.com/rating-short/alefragnani.tagged-comment.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment)
-[![](https://img.shields.io/github/workflow/status/alefragnani/vscode-tagged-comment/CI)](https://github.com/alefragnani/vscode-tagged-comment/actions?query=workflow%3ACI)
+[![](https://vsmarketplacebadges.dev/version-short/alefragnani.tagged-comment.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment)
+[![](https://vsmarketplacebadges.dev/downloads-short/alefragnani.tagged-comment.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment)
+[![](https://vsmarketplacebadges.dev/rating-short/alefragnani.tagged-comment.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment)
+[![](https://img.shields.io/github/actions/workflow/status/alefragnani/vscode-tagged-comment/main.yml?branch=master)](https://github.com/alefragnani/vscode-tagged-comment/actions?query=workflow%3ACI)
 
 <p align="center">
   <br />
