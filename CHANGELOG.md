@@ -2,6 +2,7 @@
 ### Internal
 - Support new **Implicit Activation Events API** (issue [#40](https://github.com/alefragnani/vscode-tagged-comment/issues/40))
 - Support **Translation** and **Localization** APIs (issue [#37](https://github.com/alefragnani/vscode-tagged-comment/issues/37))
+- Update badges in README (issue [#43](https://github.com/alefragnani/vscode-tagged-comment/issues/43))
 - Security Alert: minimatch (dependabot [PR #39](https://github.com/alefragnani/vscode-tagged-comment/pull/39))
 
 ## [2.8.0] - 2022-10-03
