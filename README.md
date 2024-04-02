@@ -8,13 +8,11 @@
   <a title="Learn more about Tagged Comment" href="http://github.com/alefragnani/vscode-tagged-comment"><img src="https://raw.githubusercontent.com/alefragnani/vscode-tagged-comment/master/images/vscode-tagged-comment-logo-readme.png" alt="Tagged Comment Logo" width="70%" /></a>
 </p>
 
-# What's New in Tagged Comment 2.9
+# What's New in Tagged Comment 2.10
 
+* Published to **Open VSX**
 * Adds **Translation/Localization** support
 * Adds **Web** support
-* Adds **Workspace Trust** support
-* Adds **Virtual Workspaces** support
-* Adds **Remote Development** support
 
 # Support
 

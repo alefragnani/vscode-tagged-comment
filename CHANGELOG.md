@@ -1,3 +1,11 @@
+## [2.10.0] - 2024-04-01
+### Added
+- Published to Open VSX (issue [#29](https://github.com/alefragnani/vscode-tagged-comment/issues/29))
+
+### Internal
+- Security Alert: word-wrap (dependabot [PR #45](https://github.com/alefragnani/vscode-tagged-comment/pull/45))
+- Security Alert: webpack (dependabot [PR #42](https://github.com/alefragnani/vscode-tagged-comment/pull/42))
+
 ## [2.9.0] - 2023-03-14
 ### Internal
 - Support new **Implicit Activation Events API** (issue [#40](https://github.com/alefragnani/vscode-tagged-comment/issues/40))
@@ -12,21 +20,21 @@
 
 ## [2.7.3] - 2022-07-16
 ### Internal
-* Add GitHub Sponsors support (PR [#32](https://github.com/alefragnani/vscode-tagged-comment/pull/32))
+- Add GitHub Sponsors support (PR [#32](https://github.com/alefragnani/vscode-tagged-comment/pull/32))
 
 ## [2.7.0] - 2022-04-01
 ### Internal
-* Add Web support (issue [#23](https://github.com/alefragnani/vscode-tagged-comment/issues/23))
+- Add Web support (issue [#23](https://github.com/alefragnani/vscode-tagged-comment/issues/23))
 
 ## [2.6.0] - 2021-11-04
 ### Internal
-* Add CONTRIBUTING documentation (issue [#24](https://github.com/alefragnani/vscode-tagged-comment/issues/24))
-* Update dependencies (issue [#25](https://github.com/alefragnani/vscode-tagged-comment/issues/25))
+- Add CONTRIBUTING documentation (issue [#24](https://github.com/alefragnani/vscode-tagged-comment/issues/24))
+- Update dependencies (issue [#25](https://github.com/alefragnani/vscode-tagged-comment/issues/25))
 
 ## [2.5.0] - 2021-05-30
 ### Added
-* Support **Workspace Trust** (issue [#21](https://github.com/alefragnani/vscode-tagged-comment/issues/21))
-* Support **Virtual Workspaces** (issue [#20](https://github.com/alefragnani/vscode-tagged-comment/issues/20))
+- Support **Workspace Trust** (issue [#21](https://github.com/alefragnani/vscode-tagged-comment/issues/21))
+- Support **Virtual Workspaces** (issue [#20](https://github.com/alefragnani/vscode-tagged-comment/issues/20))
 
 ### Internal
 - Security Alert: lodash (dependabot [PR #19](https://github.com/alefragnani/vscode-tagged-comment/pull/19))
@@ -40,25 +48,25 @@
 
 ## [2.4.0] - 2020-08-09
 ### Internal
-* Migrate from TSLint to ESLint (issue [#13](https://github.com/alefragnani/vscode-tagged-comment/issues/13))
-* Support WebPack bundling (issue [#12](https://github.com/alefragnani/vscode-tagged-comment/issues/12))
-* Support VS Code package split (issue [#11](https://github.com/alefragnani/vscode-tagged-comment/issues/11))
+- Migrate from TSLint to ESLint (issue [#13](https://github.com/alefragnani/vscode-tagged-comment/issues/13))
+- Support WebPack bundling (issue [#12](https://github.com/alefragnani/vscode-tagged-comment/issues/12))
+- Support VS Code package split (issue [#11](https://github.com/alefragnani/vscode-tagged-comment/issues/11))
 
 ## [2.3.0] - 2019-11-21
 ### Added
-* Support **Remote Development**
+- Support **Remote Development**
 
 ## [2.2.0] - 2019-01-18
 ### Internal
-* Update VSCode devDependency based on security alerts (1.1.22)
+- Update VSCode devDependency based on security alerts (1.1.22)
 
 ## [2.1.0] - 2018-12-03
 ### Added
-* New publishing model
+- New publishing model
 
 ## [2.0.0] - 2018-09-13
 ### Added
-* Patreon button
+- Patreon button
 
 ### Internal
 - Enabled **TSLint**
