@@ -1,3 +1,8 @@
+## [2.10.1] - 2025-02-03
+### Internal
+- Security Alert: webpack (dependabot [PR #47](https://github.com/alefragnani/vscode-tagged-comment/pull/47))
+- Security Alert: braces (dependabot [PR #46](https://github.com/alefragnani/vscode-tagged-comment/pull/46))
+
 ## [2.10.0] - 2024-04-01
 ### Added
 - Published to Open VSX (issue [#29](https://github.com/alefragnani/vscode-tagged-comment/issues/29))
