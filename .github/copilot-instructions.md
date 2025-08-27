@@ -7,7 +7,7 @@ Always reference these instructions first and fallback to search or bash command
 ## Working Effectively
 
 ### Quick Validation
-- **Run validation script**: `./validate-env.sh` -- validates the entire build environment and all key commands in ~10 seconds.
+- **Run build validation**: Use `npm run lint && npm run build` to quickly validate the build environment.
 
 ### Bootstrap and Build
 - **Install dependencies**: `npm install` -- takes 2-15 seconds depending on cache. NEVER CANCEL. Set timeout: 60+ seconds.
@@ -77,7 +77,6 @@ After making changes, always test the extension functionality:
 - **npm run lint**: <1 second. Set timeout: 30+ seconds.
 - **npm run compile**: ~1 second. Set timeout: 30+ seconds.
 - **npm run test**: FAILS due to network connectivity - do not use
-- **./validate-env.sh**: ~10 seconds for full validation. Set timeout: 60+ seconds.
 
 **CRITICAL**: Always set appropriate timeouts for all commands. Even though most complete quickly, network conditions or system load may cause delays.
 
