@@ -80,7 +80,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     function getIndentText(line: string): string {
         const pos: number = line.search(/\S/);
-        return line.substr(0, pos);
+        return line.substring(0, pos);
     }
 
     function insertTextInEditor(text: string, lineAbove: boolean) {
