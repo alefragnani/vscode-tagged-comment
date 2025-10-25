@@ -62,6 +62,25 @@ The following variables are available:
 - `#month`
 - `#year`
 
+### Custom variables
+
+You can also define your own variables in your VS Code settings using the `tagged.userDefined` map. Any `%name%` placeholder in the template is replaced by the matching value from that map.
+
+```jsonc
+// settings.json
+"tagged.userDefined": {
+  "author": "alefragnani",
+  "ticket": "ABC-123"
+},
+"tagged.tagString": "// %ticket% - #day/#month/#year - TAG: #enteredText — %author%"
+```
+
+With the configuration above, inserting a tagged comment with the text `Fix layout` results in:
+
+```ts
+// ABC-123 - 23/10/2025 - TAG: Fix layout — alefragnani
+```
+
 ### Examples
 
 #### Default

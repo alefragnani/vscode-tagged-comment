@@ -67,6 +67,14 @@
 					"type": "string",
 					"default": "// #day/#month/#year - TAG: #enteredText",
 					"description": "%tagged-comment.configuration.tagString.description%"
+				},
+				"tagged.userDefined": {
+					"type": "object",
+					"default": {},
+					"additionalProperties": {
+						"type": "string"
+					},
+					"markdownDescription": "%tagged-comment.configuration.userDefined.description%"
 				}
 			}
 		},

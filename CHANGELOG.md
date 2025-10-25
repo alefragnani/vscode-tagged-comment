@@ -1,3 +1,7 @@
+## [Unreleased]
+### Added
+- Support user-defined template variables via `tagged.userDefined` setting (issue [#1](https://github.com/alefragnani/vscode-tagged-comment/issues/1))
+
 ## [2.10.1] - 2025-02-03
 ### Internal
 - Security Alert: webpack (dependabot [PR #47](https://github.com/alefragnani/vscode-tagged-comment/pull/47))

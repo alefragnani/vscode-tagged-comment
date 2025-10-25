@@ -5,6 +5,30 @@
 
 import * as vscode from "vscode";
 
+const DEFAULT_TEMPLATE = "// #day/#month/#year - TAG: #enteredText";
+
+const escapeRegExp = (value: string): string => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const applyUserDefinedTokens = (
+    template: string,
+    userDefined: Record<string, unknown>
+): string => {
+    if (!userDefined || typeof userDefined !== "object") {
+        return template;
+    }
+
+    return Object.entries(userDefined).reduce((result, [key, rawValue]) => {
+        if (!key) {
+            return result;
+        }
+
+        const value = rawValue === undefined || rawValue === null ? "" : String(rawValue);
+        const pattern = new RegExp(`%${escapeRegExp(key)}%`, "g");
+
+        return result.replace(pattern, value);
+    }, template);
+};
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -60,7 +84,8 @@ export function activate(context: vscode.ExtensionContext) {
                 const year = date.getFullYear().toString();
 
                 //
-                const tagString = vscode.workspace.getConfiguration("tagged").get("tagString", "// #day/#month/#year - TAG: #enteredText");
+                const configuration = vscode.workspace.getConfiguration("tagged");
+                const tagString = configuration.get("tagString", DEFAULT_TEMPLATE) as string;
 
                 // console.log("tagstring: " + tagString);
 
@@ -69,6 +94,9 @@ export function activate(context: vscode.ExtensionContext) {
                 str = str.replace("#month", month);
                 str = str.replace("#year", year);
                 str = str.replace("#enteredText", text);
+
+                const userDefined = configuration.get<Record<string, unknown>>("userDefined", {});
+                str = applyUserDefinedTokens(str, userDefined);
 
                 // console.log("str: " + str);
 
