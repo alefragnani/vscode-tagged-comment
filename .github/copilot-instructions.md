@@ -1,133 +1,144 @@
 # VS Code Tagged Comment Extension
 
+Always reference these instructions first and fall back to additional search or terminal commands only when project files do not provide enough context.
+
+## Project Overview
+
 VS Code Tagged Comment is a TypeScript extension that helps developers add personalized tagged comments to their code with customizable templates including variables like dates and user-entered text.
 
-Always reference these instructions first and fallback to search or bash commands only when you encounter unexpected information that does not match the info here.
+## Technology Stack
+
+- Language: TypeScript
+- Runtime: VS Code Extension API (Node + Web)
+- Bundler: Webpack 5
+- Linting: ESLint (`eslint-config-vscode-ext`)
+- Testing: Mocha + `@vscode/test-electron`
 
 ## Working Effectively
 
-### Quick Validation
-- **Run build validation**: Use `npm run lint && npm run build` to quickly validate the build environment.
+Bootstrap and local setup:
 
-### Bootstrap and Build
-- **Install dependencies**: `npm install` -- takes 2-15 seconds depending on cache. NEVER CANCEL. Set timeout: 60+ seconds.
-- **Build the extension**: `npm run build` -- takes 2 seconds using webpack in development mode. Set timeout: 30+ seconds.
-- **Production build**: `npm run vscode:prepublish` -- takes 2 seconds, creates minified bundles. Set timeout: 30+ seconds.
-- **Watch mode**: `npm run watch` -- starts webpack in watch mode, rebuilds in ~160ms on file changes. NEVER CANCEL when developing. Set timeout: 60+ seconds for initial start.
-- **TypeScript compilation only**: `npm run compile` -- compiles TypeScript to JavaScript in `out/` directory, takes ~1 second. Set timeout: 30+ seconds.
+```bash
+npm install
+```
 
-### Linting and Code Quality
-- **Lint the code**: `npm run lint` -- runs ESLint on TypeScript files, takes <1 second. Set timeout: 30+ seconds.
-- Always run `npm run lint` before committing changes to ensure code quality.
-- The project uses ESLint with TypeScript configuration extending 'vscode-ext'.
+Build and development quickstart:
 
-### Testing
-- **Full test suite**: `npm run test` -- DOES NOT WORK due to network connectivity issues downloading VS Code for integration tests.
-- **Test compilation**: `npm run test-compile` -- compiles TypeScript and builds webpack bundles for testing.
-- **Manual testing**: Use VS Code development mode with F5 or "Launch Extension" configuration in `.vscode/launch.json`.
-- Tests are located in `src/test/` using Mocha framework with VS Code test runner.
+```bash
+npm run build
+npm run lint
+```
 
-### Development Workflow
-- **Start development**: 
-  1. `npm install` (first time only)
-  2. `npm run watch` to start auto-rebuilding
-  3. Open in VS Code and press F5 to launch extension host for testing
-- **Key project structure**:
-  - `src/extension.ts` - Main extension code with command registration and core logic
-  - `package.json` - Extension manifest with commands, configuration, and dependencies
-  - `webpack.config.js` - Build configuration for both Node.js and web targets
-  - `dist/` - Webpack build output (extension-node.js, extension-web.js)
-  - `out/` - TypeScript compilation output
-  - `.vscode/` - VS Code debugging and task configurations
+- Use `npm run watch` during active development.
+- Use VS Code "Launch Extension" (F5) to validate behavior in Extension Development Host.
+- Expected command timings are usually under 10 seconds.
+- Never cancel `npm install`, `npm run watch`, or `npm test` once started.
+## Build and Development Commands
 
-## Validation
+- `npm run compile` - TypeScript compilation
+- `npm run build` - Webpack development build
+- `npm run watch` - Continuous webpack build
+- `npm run lint` - ESLint validation
+- `npm run test` - Full test suite
+- `npm run vscode:prepublish` - Production build
 
-### Manual Testing Scenarios
-After making changes, always test the extension functionality:
+## Testing and Validation
 
-1. **Basic tag insertion**:
-   - Open any code file in the extension development host
-   - Use Ctrl+Alt+M (Cmd+Alt+M on Mac) or Command Palette > "Tagged: Add a Tagged Comment"
-   - Enter a test tag (e.g., "BUG")
-   - Verify comment appears with current date: `// DD/MM/YYYY - TAG: BUG`
+Manual testing scenarios:
 
-2. **Tag above current line**:
-   - Use Command Palette > "Tagged: Add a Tagged Comment Line Above"
-   - Verify comment appears on line above cursor with proper indentation
+1. Add tagged comment via command or keybinding and verify output format.
+2. Add tagged comment above current line and verify indentation.
+3. Re-add previous tag and confirm correct value reuse.
+4. Validate custom `tagged.tagString` with `#enteredText`, `#day`, `#month`, `#year` variables.
 
-3. **Re-tag functionality**:
-   - Use Ctrl+Alt+Shift+M (Cmd+Alt+Shift+M on Mac) or "Tagged: Re-Add the Previously Tagged Comment"
-   - Verify the last entered tag is re-inserted
+Network note:
+- `npm run test` may fail in restricted environments due to VS Code download connectivity.
 
-4. **Configuration testing**:
-   - Modify `tagged.tagString` setting in VS Code settings
-   - Test that custom template works with variables: `#day`, `#month`, `#year`, `#enteredText`
+## Project Structure and Key Files
 
-### Build Validation
-- Always run `npm run build` and verify both `dist/extension-node.js` and `dist/extension-web.js` are created successfully.
-- Run `npm run lint` and fix any warnings before committing.
-- The extension supports both desktop VS Code (Node.js target) and VS Code Web (WebWorker target).
+```
+src/
+├── extension.ts          # Command registration and tag generation logic
+└── test/                 # Test suite
 
-## Build Times and Timeouts
+l10n/                     # Runtime localization files
+dist/                     # Build artifacts (extension-node.js, extension-web.js)
+out/                      # Compiled TypeScript files
+```
 
-- **npm install**: 2-15 seconds depending on cache - NEVER CANCEL. Set timeout: 60+ seconds.
-- **npm run build**: 2 seconds - NEVER CANCEL. Set timeout: 30+ seconds.
-- **npm run vscode:prepublish**: 2 seconds - NEVER CANCEL. Set timeout: 30+ seconds.
-- **npm run watch**: starts in 2 seconds, rebuilds in 160ms - NEVER CANCEL during development. Set timeout: 60+ seconds.
-- **npm run lint**: <1 second. Set timeout: 30+ seconds.
-- **npm run compile**: ~1 second. Set timeout: 30+ seconds.
-- **npm run test**: FAILS due to network connectivity - do not use
+## Coding Conventions and Patterns
 
-**CRITICAL**: Always set appropriate timeouts for all commands. Even though most complete quickly, network conditions or system load may cause delays.
+### Indentation
 
-## Project Architecture
+- We spaces, not tabs.
+- Use 4 spaces for indentation.
 
-### Key Files and Locations
-- **Main extension entry**: `src/extension.ts` - Contains activate function and all command handlers
-- **Commands implemented**:
-  - `tagged-comment.tag` - Add tagged comment at cursor
-  - `tagged-comment.tagAbove` - Add tagged comment line above cursor  
-  - `tagged-comment.reTag` - Re-add previously entered tag
-  - `tagged-comment.reTagAbove` - Re-add previously entered tag above cursor
-- **Configuration**: Extension exposes `tagged.tagString` setting for custom comment templates
-- **Localization**: Supports internationalization with files in `l10n/` and `package.nls.json`
-- **Build outputs**: 
-  - `dist/extension-node.js` - Node.js desktop VS Code target
-  - `dist/extension-web.js` - WebWorker VS Code web target
+### Naming Conventions
 
-### Extension Variables
-The extension supports these template variables:
-- `#enteredText` - The tag text entered by user
-- `#day` - Current day (zero-padded)
-- `#month` - Current month (zero-padded) 
-- `#year` - Current year (4-digit)
+- Use PascalCase for `type` names
+- Use PascalCase for `enum` values
+- Use camelCase for `function` and `method` names
+- Use camelCase for `property` names and `local variables`
+- Use whole words in names when possible
 
-### Development Tools
-- **VS Code tasks**: Use Ctrl+Shift+B (Cmd+Shift+B on Mac) to run build tasks defined in `.vscode/tasks.json`
-- **Debugging**: Use F5 to launch extension development host with configured launch settings
-- **TypeScript**: Project uses TypeScript 4.4+ with strict mode enabled
-- **Webpack**: Dual target build (Node.js + WebWorker) for desktop and web VS Code compatibility
+### Types
 
-## Common Development Tasks
+- Do not export `types` or `functions` unless you need to share it across multiple components
+- Do not introduce new `types` or `values` to the global namespace
+- Prefer `const` over `let` when possible.
 
-### Adding New Commands
-1. Register command in `src/extension.ts` activate function
-2. Add command definition to `package.json` contributes.commands section
-3. Add localized strings to `package.nls.json`
-4. Test in development host with F5
+### Strings
 
-### Modifying Comment Templates
-1. Update default template in `package.json` configuration section
-2. Modify template processing logic in `tag()` function in `src/extension.ts`
-3. Test variable replacement logic manually
+- Use "double quotes"
+- All strings visible to the user need to be externalized using the `l10n` API
+- Externalized strings must not use string concatenation. Use placeholders instead (`{0}`).
 
-### Build and Package
-1. `npm run vscode:prepublish` - creates production minified build
-2. Use `vsce package` (if vsce is installed) to create .vsix package file
-3. Build artifacts are in `dist/` directory
+### Code Quality
 
-## Known Limitations
-- **Integration tests do not work** in this environment due to VS Code download connectivity issues
-- Extension can be built and developed but requires VS Code development host for full functionality testing
-- Always use manual testing scenarios described above to validate changes
-- Web extension target works but has limited API access compared to desktop version
+- All files must include copyright header
+- Prefer `async` and `await` over `Promise` and `then` calls
+- All user facing messages must be localized using the applicable localization framework (for example `l10n.t` method)
+- Keep imports organized: VS Code first, then internal modules.
+- Use semicolons at the end of statements.
+- Keep changes minimal and aligned with existing style.
+
+### Import Organization
+
+- Import VS Code API first: `import * as vscode from "vscode"`
+- Group related imports together
+- Use named imports for specific VS Code types
+- Import from local modules using relative paths
+
+## Extension Features and Configuration
+
+### Key Features
+1. **Tagged Comment**: Add a tagged comment at the current line or above.
+
+### Important Settings
+- `tagged.tagString`: supports variables `#enteredText`, `#day`, `#month`, `#year`)
+
+## Dependencies and External Tools
+
+- No external runtime tools are required beyond standard extension toolchain.
+- Uses `@vscode/test-electron` for integration testing.
+
+## Troubleshooting and Known Limitations
+
+- Integration tests may fail in restricted networks (VS Code download endpoint).
+- If watch mode hangs, stop and run `npm run build` once.
+- Validate command behavior in Extension Host when modifying template logic.
+
+## CI and Pre-Commit Validation
+
+Before committing:
+
+1. Run `npm run lint`.
+2. Run `npm run build`.
+3. Run `npm run test-compile`.
+4. Validate manual command scenarios in Extension Host.
+
+## Common Tasks
+
+1. Add/update commands in `src/extension.ts` and `package.json` contributions.
+2. Update default template behavior and variable replacement logic.
+3. Keep localization keys updated in `package.nls*.json` and `l10n/`.
