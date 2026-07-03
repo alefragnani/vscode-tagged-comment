@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tagged Comment for Visual Studio Code helps you add personalized, templated comments with variables like date and entered text, and re-add them fast.">
+    <title>Tagged Comment for VS Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="#top" aria-label="Tagged Comment home">
+                <img src="images/icon.png" alt="Tagged Comment icon" class="brand-mark">
+                <span class="brand-copy">
+                    <strong>Tagged Comment</strong>
+                    <!-- <span>for VS Code</span> -->
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-nav" aria-label="Open menu" title="Open menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav id="top-nav" class="top-nav" aria-label="Primary navigation">
+                <a href="#features">Features</a>
+                <a href="#faq">FAQ</a>
+                <a href="#donate"><i class="fa-solid fa-heart" aria-hidden="true"></i> Donate</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://github.com/alefragnani/vscode-tagged-comment" aria-label="GitHub" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true" style="font-size: 24px;"></i>
+                </a>
+            </div>
+        </header>
+
+        <main id="top">
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">Visual Studio Code Extension</p>
+                    <h1>Add comments with special meaning.</h1>
+                    <p class="hero-text">
+                        Tagged Comment helps you add personalized comments to your code using a customizable
+                        template. Combine fixed text with variables like the current date, then re-add the
+                        same tag whenever you need it again.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="https://marketplace.visualstudio.com/items?itemName=alefragnani.tagged-comment">Get it on Marketplace</a>
+                        <a class="button button-muted" href="https://open-vsx.org/extension/alefragnani/tagged-comment">Open VSX</a>
+                    </div>
+                    <ul class="hero-points" aria-label="Tagged Comment highlights">
+                        <li>Add a tagged comment at the current line or above it</li>
+                        <li>Customize the template with date and text variables</li>
+                        <li>Re-add the previously used tag in one command</li>
+                    </ul>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card hero-card-shot">
+                        <img src="images/tagged-comment-comment-added.png" alt="Tagged Comment added screenshot">
+                    </div>
+                </div>
+            </section>
+
+            <section class="announcement">
+                <p class="eyebrow">What&apos;s new in 2.10</p>
+                <div class="announcement-grid">
+                    <article>
+                        <h2>Broader reach, same simple workflow</h2>
+                        <p>Tagged Comment is now published to Open VSX and adds translation and Web support, so your tagging workflow keeps working wherever you run VS Code.</p>
+                    </article>
+                    <ul>
+                        <li>Published to Open VSX</li>
+                        <li>Adds Translation/Localization support</li>
+                        <li>Adds Web support</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="feature-index" id="features">
+                <div class="section-heading">
+                    <p class="eyebrow">Features</p>
+                    <h2>Jump to the key capabilities.</h2>
+                </div>
+                <div class="feature-grid">
+                    <a class="feature-card" href="#add-a-tagged-comment">
+                        <span class="feature-number">01</span>
+                        <h3>Add a Tagged Comment</h3>
+                        <p>Type your tag and let the template turn it into a formatted comment on the current line or above.</p>
+                    </a>
+                    <a class="feature-card" href="#customizable-template">
+                        <span class="feature-number">02</span>
+                        <h3>Customizable Template</h3>
+                        <p>Define your own <code>tagged.tagString</code> combining fixed text and variables.</p>
+                    </a>
+                    <a class="feature-card" href="#re-tag-commands">
+                        <span class="feature-number">03</span>
+                        <h3>Re-Tag Commands</h3>
+                        <p>Reuse the previously entered tag without retyping it, at the current line or above.</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="spotlight spotlight-reverse" id="add-a-tagged-comment">
+                <div class="spotlight-copy">
+                    <p class="eyebrow">Add a tagged comment</p>
+                    <h2>Type a tag, get a formatted comment instantly.</h2>
+                    <p>
+                        Run a command, enter your tag text, and Tagged Comment inserts it using your configured
+                        template on the current line, or as a new line above it, keeping indentation intact.
+                    </p>
+                    <div class="detail-list">
+                        <div>
+                            <h3>Tagged: Add a Tagged Comment</h3>
+                            <p>Adds the tagged comment on the current line, right where your cursor is.</p>
+                        </div>
+                        <div>
+                            <h3>Tagged: Add a Tagged Comment Line Above</h3>
+                            <p>Inserts a new line above the current one with the tagged comment, preserving indentation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="spotlight-visual stack">
+                    <figure class="media-card">
+                        <img src="images/tagged-comment-commands.png" alt="Add Tag input box screenshot">
+                    </figure>
+                </div>
+            </section>
+
+            <section class="spotlight" id="customizable-template">
+                <div class="spotlight-copy">
+                    <p class="eyebrow">Customizable template</p>
+                    <h2>Shape the comment format around your own workflow.</h2>
+                    <p>
+                        The <code>tagged.tagString</code> setting controls exactly how each comment is built.
+                        Mix fixed labels, like an issue tracker prefix, with variables that get replaced automatically
+                        every time you add a tag.
+                    </p>
+                    <div class="command-list">
+                        <article>
+                            <h3>Default template</h3>
+                            <p>Just adds the current date alongside your tag:</p>
+                            <pre class="json-example"><code>// #day/#month/#year - TAG: #enteredText</code></pre>
+                        </article>
+                        <article>
+                            <h3>Issue tracker template</h3>
+                            <p>Swap the label to match your team's conventions:</p>
+                            <pre class="json-example"><code>// #day/#month/#year - ISSUE: #enteredText</code></pre>
+                        </article>
+                    </div>
+                </div>
+                <div class="spotlight-visual">
+                        <pre class="json-example"><code><span class="json-punctuation">{</span>
+  <span class="json-key">"tagged.tagString"</span><span class="json-punctuation">:</span> <span class="json-string">"// #day/#month/#year - TAG: #enteredText"</span>
+<span class="json-punctuation">}</span></code></pre>
+                </div>
+            </section>
+
+            <section class="settings-section" id="re-tag-commands">
+                <div class="section-heading">
+                    <p class="eyebrow">Re-tag commands</p>
+                    <h2>Reuse your last tag without typing it again.</h2>
+                </div>
+                <div class="settings-grid">
+                    <article>
+                        <h3>Re-Add the Previously Tagged Comment</h3>
+                        <ul>
+                            <li>Repeats the last entered tag on the current line</li>
+                            <li>Skips the input box entirely</li>
+                            <li>Bound to <code>ctrl+alt+shift+m</code> (<code>cmd+alt+shift+m</code> on macOS)</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Re-Add the Previously Tagged Comment Line Above</h3>
+                        <ul>
+                            <li>Same reuse behavior, inserted as a new line above</li>
+                            <li>Keeps indentation consistent with the current line</li>
+                            <li>Great for marking a block of related code at once</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Add commands and keybindings</h3>
+                        <ul>
+                            <li><code>Tagged: Add a Tagged Comment</code></li>
+                            <li><code>Tagged: Add a Tagged Comment Line Above</code></li>
+                            <li>Default keybinding <code>ctrl+alt+m</code> (<code>cmd+alt+m</code> on macOS)</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="feature-index faq-section" id="faq">
+                <div class="section-heading">
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Quick answers for common questions.</h2>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>What does Tagged Comment actually insert?</summary>
+                        <p>It inserts a comment built from your <code>tagged.tagString</code> template, replacing variables like <code>#enteredText</code>, <code>#day</code>, <code>#month</code>, and <code>#year</code> with the tag you typed and the current date.</p>
+                    </details>
+                    <details>
+                        <summary>Can I add the comment above the current line instead?</summary>
+                        <p>Yes! Use <code>Tagged: Add a Tagged Comment Line Above</code> to insert a new line above your cursor with the tagged comment, keeping the same indentation.</p>
+                    </details>
+                    <details>
+                        <summary>How do I reuse a tag I already typed?</summary>
+                        <p>Run <code>Tagged: Re-Add the Previously Tagged Comment</code> (or its "Line Above" variant) to insert the same tag again without retyping it.</p>
+                    </details>
+                    <details>
+                        <summary>How do I customize the comment format?</summary>
+                        <p>Change the <code>tagged.tagString</code> setting to any combination of fixed text and the supported variables, for example to match your team's issue tracker conventions.</p>
+                    </details>
+                    <details>
+                        <summary>What are the default keybindings?</summary>
+                        <p><code>ctrl+alt+m</code> (<code>cmd+alt+m</code> on macOS) adds a tagged comment, and <code>ctrl+alt+shift+m</code> (<code>cmd+alt+shift+m</code> on macOS) re-adds the previous tag, both while the editor has focus.</p>
+                    </details>
+                    <details>
+                        <summary>Does it work on VS Code forks like Cursor, Windsurf, and Antigravity?</summary>
+                        <p>Yes! It works on all VS Code forks, ensuring compatibility and seamless integration with your favorite tools.</p>
+                    </details>
+                    <details>
+                        <summary>I have a feature request, bug report, or suggestion.</summary>
+                        <p>If you have a feature request, bug report, or suggestion, please submit it through our <a href="https://github.com/alefragnani/vscode-tagged-comment/issues" class="text-link">GitHub Issues</a> page. We appreciate your feedback!</p>
+                    </details>
+                    <details>
+                        <summary>I have a question that's not listed here.</summary>
+                        <p>If you have a question that's not covered in the FAQ, feel free to reach out through our support channels at <a href="https://github.com/alefragnani/vscode-tagged-comment/discussions" class="text-link">GitHub Discussions</a>. We're here to help!</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="support-section" id="donate">
+                <div class="section-heading">
+                    <p class="eyebrow">Donate</p>
+                    <h2>Support the extension if you find it useful.</h2>
+                </div>
+                <div class="support-grid">
+                    <article>
+                        <h3>Why support it</h3>
+                        <p>Tagged Comment is open source, and your support helps keep maintenance, improvements, and ecosystem compatibility moving forward.</p>
+                        <div class="link-row">
+                            <a class="text-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=EP57F3B6FXKTU&amp;lc=US&amp;item_name=Alessandro%20Fragnani&amp;item_number=vscode%20extensions&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted">PayPal</a>
+                            <a class="text-link" href="https://github.com/sponsors/alefragnani">GitHub Sponsors</a>
+                            <a class="text-link" href="https://www.patreon.com/alefragnani">Patreon</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        
+    </div>
+    <footer class="site-footer">
+        <div class="footer-social">
+            <a href="https://twitter.com/alefragnani" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://github.com/alefragnani" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/alefragnani/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+          <div class="footer-copy">&copy; 2026 Alessandro Fragnani</div>
+    </footer>
+    <script>
+        (() => {
+            const header = document.querySelector(".site-header");
+            const navToggle = document.querySelector(".nav-toggle");
+            const topNav = document.querySelector("#top-nav");
+
+            if (!(header instanceof HTMLElement) || !(navToggle instanceof HTMLButtonElement) || !(topNav instanceof HTMLElement)) {
+                return;
+            }
+
+            const mobileQuery = window.matchMedia("(max-width: 900px)");
+
+            const setExpanded = (expanded) => {
+                navToggle.setAttribute("aria-expanded", String(expanded));
+                header.classList.toggle("nav-open", expanded);
+                navToggle.setAttribute("aria-label", expanded ? "Close menu" : "Open menu");
+                navToggle.setAttribute("title", expanded ? "Close menu" : "Open menu");
+            };
+
+            const closeMenu = () => setExpanded(false);
+
+            navToggle.addEventListener("click", () => {
+                const expanded = navToggle.getAttribute("aria-expanded") === "true";
+                setExpanded(!expanded);
+            });
+
+            topNav.addEventListener("click", (event) => {
+                const target = event.target;
+                if (target instanceof HTMLElement && target.closest("a")) {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!mobileQuery.matches || !(event.target instanceof Node)) {
+                    return;
+                }
+
+                if (!header.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+
+            mobileQuery.addEventListener("change", () => {
+                if (!mobileQuery.matches) {
+                    closeMenu();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
