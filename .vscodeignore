@@ -21,4 +21,5 @@ webpack.config.js
 AGENTS.md
 
 # gh-pages
-docs/**
+index.html
+styles.css
