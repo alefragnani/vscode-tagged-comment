@@ -47,11 +47,11 @@ It helps you to personalized comments on your code. Set define a template for yo
 
 ### Add your tag
 
-![Add Tag](images/tagged-comment-add-tag.png)
+![Add Tag](docs/images/tagged-comment-add-tag.png)
 
 ### Comment added
 
-![Comment Added](images/tagged-comment-comment-added.png)
+![Comment Added](docs/images/tagged-comment-comment-added.png)
 
 ## Available variables
 
