@@ -17,7 +17,7 @@ git clone https://github.com/alefragnani/vscode-tagged-comment.git
 Prerequisites
 
 - [Git](https://git-scm.com/), `>= 2.22.0`
-- [NodeJS](https://nodejs.org/), `22.22.1` (see `.nvmrc`)
+- [NodeJS](https://nodejs.org/), `22.x` (use the version from `.nvmrc`)
 
 ### Dependencies
 
