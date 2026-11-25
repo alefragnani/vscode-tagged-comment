@@ -1,3 +1,23 @@
+## [2.10.2] - 2026-11-10
+### Internal
+- Security Alert: brace-expansion (dependabot [PR #85](https://github.com/alefragnani/vscode-tagged-comment/pull/85))
+- Security Alert: serialize-javascript (dependabot [PR #84](https://github.com/alefragnani/vscode-tagged-comment/pull/84))
+- Security Alert: minimatch, @typescript-eslint/eslint-plugin and @typescript-eslint/parser (dependabot [PR #79](https://github.com/alefragnani/vscode-tagged-comment/pull/79))
+- Security Alert: serialize-javascript, mocha and terser-webpack-plugin (dependabot [PR #78](https://github.com/alefragnani/vscode-tagged-comment/pull/78))
+- Security Alert: js-yaml (dependabot [PR #76](https://github.com/alefragnani/vscode-tagged-comment/pull/76))
+- Security Alert: brace-expansion (dependabot [PR #75](https://github.com/alefragnani/vscode-tagged-comment/pull/75))
+- Security Alert: browserslist (dependabot [PR #74](https://github.com/alefragnani/vscode-tagged-comment/pull/74))
+- Security Alert: fast-uri (dependabot [PR #73](https://github.com/alefragnani/vscode-tagged-comment/pull/73))
+- Security Alert: js-yaml (dependabot [PR #72](https://github.com/alefragnani/vscode-tagged-comment/pull/72))
+- Security Alert: fast-uri (dependabot [PR #71](https://github.com/alefragnani/vscode-tagged-comment/pull/71))
+- Security Alert: js-yaml (dependabot [PR #66](https://github.com/alefragnani/vscode-tagged-comment/pull/66))
+- Security Alert: fast-uri (dependabot [PR #65](https://github.com/alefragnani/vscode-tagged-comment/pull/65))
+- Security Alert: picomatch (dependabot [PR #60](https://github.com/alefragnani/vscode-tagged-comment/pull/60))
+- Security Alert: flatted (dependabot [PR #59](https://github.com/alefragnani/vscode-tagged-comment/pull/59))
+- Security Alert: minimatch, @typescript-eslint/eslint-plugin and @typescript-eslint/parser (dependabot [PR #56](https://github.com/alefragnani/vscode-tagged-comment/pull/56))
+- Security Alert: js-yaml and @eslint/eslintrc (dependabot [PR #54](https://github.com/alefragnani/vscode-tagged-comment/pull/54))
+- Security Alert: serialize-javascript and mocha (dependabot [PR #48](https://github.com/alefragnani/vscode-tagged-comment/pull/48))
+
 ## [2.10.1] - 2025-02-03
 ### Internal
 - Security Alert: webpack (dependabot [PR #47](https://github.com/alefragnani/vscode-tagged-comment/pull/47))
